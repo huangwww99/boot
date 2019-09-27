@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>账号</td>
+            <td>姓名</td>
+            <td>邮箱</td>
+            <td>手机号</td>
+            <td>地址</td>
+            <td>操作</td>
+        </tr>
+        <tr th:each="users : ${userList}">
+            <td th:text="${users.uName}"></td>
+            <td th:text="${users.uRealName}"></td>
+            <td th:text="${users.eMail}"></td>
+            <td th:text="${users.uPhone}"></td>
+            <td th:text="${users.uAddress}"></td>
+            <td><a th:href="@{put(uId=${users.uId})}" th:text="修改" ></a></td>
+            <td><a th:href="put" th:text="删除" ></a></td>
+
+    </table>
+</body>
+</html>

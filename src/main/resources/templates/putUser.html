@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  th:action="@{putId}" method="post">
+<table  border="1">
+    <tr>
+        <td>姓名</td>
+        <td><input type="text" th:value="${user.uRealName}" th:name="uRealName"/></td>
+    </tr>
+    <tr>
+        <td>邮箱</td>
+        <td th:text="${user.eMail}"></td>
+
+    </tr>
+    <tr>
+    <td>手机号</td>
+    <td th:text="${user.uPhone}"></td>
+    </tr>
+    <tr>
+        <td align="conter" colspan="2"><input type="submit" value="修改"></td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>
