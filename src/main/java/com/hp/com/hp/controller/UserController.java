@@ -17,6 +17,7 @@ public class UserController {
     private IUserServlet userServlet;
     @RequestMapping(value = "user")
     public String userList(HttpServletRequest request){
+        System.out.println(123456789);
         List<User> users = userServlet.userList();
         request.setAttribute("userList" ,users);
         return "main";
